@@ -1,7 +1,7 @@
  class Bingo
    NUM_MAX = 75
    MESSAGE_GAME_IS_OVER = "This game is already complete.\n"
-   attr_accessor :rust_numbers, :used_numbers,:current_number
+   attr_reader :rust_numbers, :used_numbers,:current_number
    
    def initialize
      @rust_numbers = Array.new(NUM_MAX){|n| n}
