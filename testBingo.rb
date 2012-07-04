@@ -2,7 +2,7 @@ require "bingo.rb"
 
 bingo = Bingo.new
 
-while bingo.check_rust?
+while bingo.remain?
   bingo.select_number
   print bingo.current_number
   print "\n"
@@ -17,8 +17,8 @@ print bingo.used_numbers[4]
 print ":"
 print bingo.unused? bingo.used_numbers[4]
 print "\n"
-print bingo.rust_numbers[4]
+print bingo.remaining_numbers[4]
 print ":"
-print bingo.unused? bingo.rust_numbers[4]
+print bingo.unused? bingo.remaining_numbers[4]
 print "\n"
 
