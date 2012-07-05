@@ -10,7 +10,7 @@
     
    def select_number
      if remain?
-       @current_number = @remaining_numbers.choice
+       @current_number = @remaining_numbers.sample
        @remaining_numbers.reject! {|x| x == @current_number}
        @used_numbers << @current_number
      end
