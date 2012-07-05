@@ -11,7 +11,7 @@
    def select_number
      if remain?
        @current_number = @remaining_numbers.sample
-       @remaining_numbers.reject! {|x| x == @current_number}
+       @remaining_numbers.delete(@current_number)
        @used_numbers << @current_number
      end
    end
