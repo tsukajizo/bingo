@@ -17,11 +17,7 @@
    end
    
    def remain?
-     if @remaining_numbers.size > 0
-       true
-     else
-       false
-     end
+     !@remaining_numbers.empty?
    end
    
    def unused?(num)
