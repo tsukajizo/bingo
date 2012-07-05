@@ -1,4 +1,4 @@
-require "bingo.rb"
+require_relative "bingo"
 
 bingo = Bingo.new
 

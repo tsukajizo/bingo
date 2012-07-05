@@ -5,27 +5,23 @@
    
    def initialize
      @remaining_numbers = Array.new(NUM_MAX){|n| n}
-     @used_numbers = Array.new()
+     @used_numbers = []
    end
     
    def select_number
-     if remain?
-       @current_number = @remaining_numbers.choice
-       @remaining_numbers.reject! {|x| x == @current_number}
-       @used_numbers.push @current_number
-     end
+     return if @remaining_numbers.empty?
+
+     @current_number = @remaining_numbers.sample
+     @remaining_numbers.delete(@current_number)
+     @used_numbers << @current_number
    end
    
    def remain?
-     unless @remaining_numbers.size > 0
-       false
-     else
-       true
-     end
+     !@remaining_numbers.empty?
    end
    
    def unused?(num)
-     return  @remaining_numbers.index(num) != nil
+     !@remaining_numbers.index(num).nil?
    end
 
  end
