@@ -12,7 +12,7 @@
      if remain?
        @current_number = @remaining_numbers.choice
        @remaining_numbers.reject! {|x| x == @current_number}
-       @used_numbers.push @current_number
+       @used_numbers << @current_number
      end
    end
    
