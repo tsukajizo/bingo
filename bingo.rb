@@ -9,11 +9,11 @@
    end
     
    def select_number
-     if remain?
-       @current_number = @remaining_numbers.sample
-       @remaining_numbers.delete(@current_number)
-       @used_numbers << @current_number
-     end
+     return if @remaining_numbers.empty?
+
+     @current_number = @remaining_numbers.sample
+     @remaining_numbers.delete(@current_number)
+     @used_numbers << @current_number
    end
    
    def remain?
