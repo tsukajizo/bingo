@@ -5,7 +5,7 @@
    
    def initialize
      @remaining_numbers = Array.new(NUM_MAX){|n| n}
-     @used_numbers = Array.new()
+     @used_numbers = []
    end
     
    def select_number
