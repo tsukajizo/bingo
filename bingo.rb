@@ -21,7 +21,7 @@
    end
    
    def unused?(num)
-     return  @remaining_numbers.index(num) != nil
+     !@remaining_numbers.index(num).nil?
    end
 
  end
