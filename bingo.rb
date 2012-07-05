@@ -17,10 +17,10 @@
    end
    
    def remain?
-     unless @remaining_numbers.size > 0
-       false
-     else
+     if @remaining_numbers.size > 0
        true
+     else
+       false
      end
    end
    
